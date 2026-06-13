@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fight Arena Store</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== BASE ===== */
+body{
+  font-family:"Cairo",sans-serif;
+  background: radial-gradient(circle at top, #0b0014, #05010a 60%, #000);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== BACKGROUND ===== */
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(168,85,247,0.25), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(124,58,237,0.20), transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(59,7,100,0.25), transparent 55%);
+  filter: blur(120px);
+  animation: floatBg 14s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg{
+  from{transform:scale(1) rotate(0deg);}
+  to{transform:scale(1.15) rotate(6deg);}
+}
+
+/* ===== GLASS ===== */
+.glass{
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(168,85,247,0.12);
+
+  box-shadow:
+    0 0 40px rgba(168,85,247,0.10),
+    inset 0 0 20px rgba(168,85,247,0.05);
+
+  border-radius: 22px;
+}
+
+/* ===== NAV ===== */
+.nav-link{
+  position:relative;
+  padding:8px 14px;
+  border-radius:12px;
+  transition:0.35s;
+  color:#c4b5fd;
+}
+
+.nav-link:hover{
+  color:white;
+  background:rgba(168,85,247,0.08);
+  box-shadow:0 0 25px rgba(168,85,247,0.2);
+  transform:translateY(-2px);
+}
+
+.nav-link.active::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:20%;
+  width:60%;
+  height:2px;
+  background:linear-gradient(90deg,#a855f7,#c084fc);
+  box-shadow:0 0 12px #a855f7;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero h1{
+  font-size:4.5rem;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.hero span{
+  color:#a855f7;
+  text-shadow:0 0 25px #a855f7;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  padding:14px 28px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#7c3aed,#a855f7);
+  box-shadow:0 0 35px rgba(168,85,247,0.35);
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.btn:hover{
+  transform:translateY(-4px) scale(1.06);
+  box-shadow:0 0 60px rgba(168,85,247,0.6);
+}
+
+/* ===== FADE ===== */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.9s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full z-50 glass">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+    <div class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-xl overflow-hidden border border-purple-500/30 shadow-lg">
+        <img src="img/logo.png" class="w-full h-full object-cover">
+      </div>
+      <h1 class="font-black text-purple-300">Fight Arena</h1>
+    </div>
+
+    <nav class="hidden md:flex gap-4 text-sm">
+      <a href="#about" class="nav-link">من نحن</a>
+      <a href="#idea" class="nav-link">الفكرة</a>
+      <a href="#web" class="nav-link">البرمجة</a>
+      <a href="shop.html" class="nav-link">المتجر</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero fade">
+  <div>
+    <h1>
+      Fight Arena <span>Store</span>
+    </h1>
+
+    <p class="text-gray-400 mt-6 max-w-xl mx-auto">
+      Premium FiveM Experience • Scripts • Vehicles • VIP Systems
+    </p>
+
+    <div class="mt-10">
+      <a href="shop.html" class="btn">دخول المتجر</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-12 fade">
+  <div class="glass p-8 flex flex-col md:flex-row gap-6 items-center">
+
+    <img src="img/nhn.png" class="w-full md:w-1/3 rounded-xl">
+
+    <div>
+      <h2 class="text-purple-300 text-3xl font-bold">من نحن</h2>
+      <p class="text-gray-400 mt-3">
+        نقدم تجربة FiveM احترافية بجودة عالية وتصميم فاخر ومميز.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- IDEA -->
+<section id="idea" class="max-w-6xl mx-auto px-4 py-12 fade">
+  <div class="glass p-8 flex flex-col md:flex-row gap-6 items-center">
+
+    <img src="img/mogaa.png" class="w-full md:w-1/3 rounded-xl">
+
+    <div>
+      <h2 class="text-purple-300 text-3xl font-bold">الفكرة</h2>
+      <p class="text-gray-400 mt-3">
+        منصة حديثة لعرض خدمات السيرفر والمتجر بشكل احترافي وسلس وتجربة مستخدم فخمة.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WEB -->
+<section id="web" class="max-w-6xl mx-auto px-4 py-12 fade">
+  <div class="glass p-8 flex flex-col md:flex-row gap-6 items-center">
+
+    <img src="img/programe.png" class="w-full md:w-1/3 rounded-xl">
+
+    <div>
+      <h2 class="text-purple-300 text-3xl font-bold">البرمجة</h2>
+      <p class="text-gray-400 mt-3">
+        سكربتات FiveM • مواقع احترافية • أنظمة VIP متقدمة بأداء عالي.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-gray-500 border-t border-purple-500/10 mt-20">
+  © 2025 Fight Arena Store
+</footer>
+
+<script>
+const f=document.querySelectorAll(".fade");
+
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting) x.target.classList.add("show");
+  });
+},{threshold:0.2});
+
+f.forEach(x=>obs.observe(x));
+</script>
+
+</body>
+</html>
