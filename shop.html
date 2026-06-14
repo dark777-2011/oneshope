@@ -147,7 +147,7 @@ body::before{
       <div class="p-6 border-t border-white/5 bg-slate-900 space-y-5">
         <div class="flex items-center justify-between">
           <span class="text-sm font-medium text-slate-400">إجمالي الحساب:</span>
-          <span id="cartTotal" class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">0.00 ر.س</span>
+          <span id="cartTotal" class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">0.00 $</span>
         </div>
 
         <a href="https://discord.com/channels/1466423051838292060/1478541701705367678" target="_blank" class="block text-center w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transition-all duration-300 font-black text-white shadow-lg shadow-purple-500/20 active:scale-[0.98]">
@@ -306,7 +306,7 @@ const products = [
           <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
             <div class="flex flex-col">
               <span class="text-[9px] text-slate-500 font-bold uppercase tracking-wider">السعر التقديري</span>
-              <span class="text-lg font-black text-white">${p.price} <span class="text-xs font-normal text-slate-400">ر.س</span></span>
+              <span class="text-lg font-black text-white">${p.price} <span class="text-xs font-normal text-slate-400">$</span></span>
             </div>
             <div class="flex gap-1.5">
               <button data-id="${p.id}" class="btn-view px-3 py-2 rounded-lg text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/5 transition-all">تفاصيل</button>
@@ -333,7 +333,7 @@ const products = [
         selectedProduct=p;
         mTitle.textContent=p.title;
         mDesc.textContent=p.desc;
-        mPrice.innerHTML=p.price+' <span class="text-xs font-medium text-slate-500">ر.س</span>';
+        mPrice.innerHTML=p.price+' <span class="text-xs font-medium text-slate-500">$</span>';
         mTag.textContent=p.tag;
         productModal.classList.remove('hidden'); productModal.classList.add('flex');
       }));
@@ -352,12 +352,12 @@ const products = [
     function updateCart(){
       cartCount.textContent=cart.reduce((s,i)=>s+i.qty,0);
       const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
-      cartTotal.textContent=total.toFixed(2)+' ر.س';
+      cartTotal.textContent=total.toFixed(2)+' $';
       cartItems.innerHTML=cart.length ? cart.map(item=>
         `<div class="p-4 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-between gap-4">
           <div>
             <div class="font-bold text-sm text-white/90">${item.title}</div>
-            <div class="text-xs text-purple-400 mt-1 font-bold">${item.price} ر.س × ${item.qty}</div>
+            <div class="text-xs text-purple-400 mt-1 font-bold">${item.price} $ × ${item.qty}</div>
           </div>
           <div class="flex items-center gap-1">
             <button class="w-6 h-6 flex items-center justify-center rounded bg-white/5 hover:bg-white/10 text-xs font-bold" onclick="changeQty(${item.id},-1)">-</button>
