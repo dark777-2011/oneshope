@@ -237,16 +237,6 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
 const storeProducts = [
   {
     id: 1,
-    title: 'سكن محمدينك',
-    desc: 'شخصية داخل السيرفر',
-    price: 10,
-    tag: 'شخصية',
-    cat: 'accounts',
-    popular: true,
-    img: 'img/ped1.png'
-  },
-  {
-    id: 2,
     title: 'سكن حبحبوه',
     desc: 'شخصية داخل السيرفر',
     price: 10,
@@ -256,7 +246,7 @@ const storeProducts = [
     img: 'img/ped.png'
   },
   {
-    id: 3,
+    id: 2,
     title: 'سيارة CLS 63',
     desc: 'سيارة سريعة',
     price: 12,
@@ -266,7 +256,7 @@ const storeProducts = [
     img: 'img/cls.png'
   },
   {
-    id: 4,
+    id: 3,
     title: 'سيارة تورس',
     desc: 'سيارة سريعة',
     price: 7,
@@ -276,7 +266,7 @@ const storeProducts = [
     img: 'img/tores.png'
   },
   {
-    id: 5,
+    id: 4,
     title: 'سيارة G-Class Brabus',
     desc: 'سيارة فخمة وسريعة',
     price: 15,
@@ -286,7 +276,7 @@ const storeProducts = [
     img: 'img/gclass.png'
   },
   {
-    id: 6,
+    id: 5,
     title: 'سيارة بورش',
     desc: 'خدمة سيارات معدلة بشكل احترافي للسيرفر',
     price: 10,
@@ -296,7 +286,7 @@ const storeProducts = [
     img: 'img/porch.png'
   },
   {
-    id: 7,
+    id: 6,
     title: 'Sunrise',
     desc: 'تصميم مميز وفخم داخل السيرفر',
     price: 9,
@@ -306,7 +296,7 @@ const storeProducts = [
     img: 'img/sur.png'
   },
   {
-    id: 8,
+    id: 7,
     title: 'سيارة BMW M3',
     desc: 'سيارة رياضية معدلة بجودة عالية',
     price: 13,
@@ -314,6 +304,86 @@ const storeProducts = [
     cat: 'accounts',
     popular: true,
     img: 'img/bmw5.png'
+  },
+  {
+    id: 8,
+    title: 'سيارة تراك هوك',
+    desc: 'سيارة رياضية معدلة بجودة عالية',
+    price: 12,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/hook.png'
+  },
+  {
+    id: 9,
+    title: 'سيارة تشارجر',
+    desc: 'سيارة رياضية معدلة بجودة عالية',
+    price: 10,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/charger.png'
+  },
+  {
+    id: 10,
+    title: 'سيارة روز رايز',
+    desc: 'سيارة رياضية معدلة بجودة عالية',
+    price: 10,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/rose.png'
+  },
+  {
+    id: 11,
+    title: 'سيارة بينتلي',
+    desc: 'سيارة فخمة ',
+    price: 15,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/bb.jpg'
+  },
+  {
+    id: 12,
+    title: 'سيارة GMC',
+    desc: 'سيارة فخمة وعالية 4v4',
+    price: 10,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/gmc.png'
+  },
+  {
+    id: 13,
+    title: 'سيارة كابريس',
+    desc: 'سيارة فخمة وسريعة',
+    price: 10,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/capres.png'
+  },
+  {
+    id: 14,
+    title: 'دباب سريع',
+    desc: 'دباب فخم وسريع',
+    price: 10,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/dbab.png'
+  },
+  {
+    id: 15,
+    title: 'سيارة روز رايز منصوري',
+    desc: 'سيارة فخم وسريع',
+    price: 16,
+    tag: 'سيارة',
+    cat: 'accounts',
+    popular: true,
+    img: 'img/rose1.png'
   }
 ];
 
@@ -510,17 +580,17 @@ document.getElementById('checkoutBtn').addEventListener('click', async () => {
   const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
 
   const payload = {
-    content: "🛒 **طلب جديد من المتجر**",
-    embeds: [{
-      title: "تفاصيل الطلب",
-      color: 0x8b5cf6,
-      fields: [
-        { name: "Discord ID", value: cleanId, inline: false },
-        { name: "الطلب", value: orderText || "لا يوجد", inline: false },
-        { name: "الإجمالي", value: total + " $", inline: true }
-      ]
-    }]
-  };
+  content: `🛒 **طلب جديد من المتجر** <@${cleanId}>`,
+  embeds: [{
+    title: "تفاصيل الطلب",
+    color: 0x8b5cf6,
+    fields: [
+      { name: "Discord ID", value: cleanId, inline: false },
+      { name: "الطلب", value: orderText || "لا يوجد", inline: false },
+      { name: "الإجمالي", value: total + " $", inline: true }
+    ]
+  }]
+};
 
   await fetch(WEBHOOK_URL, {
     method: "POST",
