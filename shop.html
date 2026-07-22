@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Respect One CFW Store</title>
+  <title>Last One CFW Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-body { 
+body {
   font-family: "Cairo", sans-serif;
-  background: radial-gradient(circle at top, #120018 0%, #07010c 60%, #000000 100%);
-  text-shadow: 0 0 20px rgba(168,85,247,0.05);
-  color: #f3e8ff;
+  background: radial-gradient(circle at top, #3a3a3a 0%, #181818 45%, #080808 100%);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.06);
+  color: #f5f5f5;
 }
  
 body::before{
@@ -21,7 +21,7 @@ body::before{
   position:fixed;
   inset:0;
   background:
-     radial-gradient(circle at 20% 20%, rgba(168,85,247,0.15), transparent 45%),
+     radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 45%),
   radial-gradient(circle at 80% 30%, rgba(147,51,234,0.12), transparent 50%),
   radial-gradient(circle at 50% 80%, rgba(126,34,206,0.10), transparent 55%);
   filter: blur(120px);
@@ -30,8 +30,8 @@ body::before{
 
     /* كروت المنتجات باللون السكني الميتاليك والمحدد بالأزرق النيون الخفيف */
 .cyber-card {
-  background: rgba(168,85,247,0.05);
-  border: 1px solid rgba(168,85,247,0.15);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   backdrop-filter: blur(18px);
   transition: 0.4s;
@@ -40,11 +40,11 @@ body::before{
 
 .cyber-card:hover {
   transform: translateY(-8px) scale(1.02);
-  border-color: rgba(168,85,247,0.8);
+  border-color: rgba(255,255,255,0.06);
   box-shadow:
     0 25px 80px rgba(0,0,0,0.7),
-    0 0 40px rgba(168,85,247,0.35),
-    inset 0 0 20px rgba(168,85,247,0.08);
+    0 0 40px rgba(255,255,255,0.06),
+    inset 0 0 20px rgba(255,255,255,0.06);
 }
 
     /* سكرول بار متناسق وفخم */
@@ -65,10 +65,15 @@ body::before{
 }
   </style>
 </head>
-<body class="min-h-screen text-slate-200 selection:bg-purple-600 selection:text-white overflow-x-hidden antialiased relative">
+<body class="min-h-screen text-slate-200 selection:bg-white selection:text-black overflow-x-hidden antialiased relative">
 
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-purple-600/10 via-purple-500/5 to-transparent blur-[150px] pointer-events-none z-0"></div>
-  <div class="absolute bottom-0 right-10 w-[500px] h-[500px] bg-purple-500/10 blur-[180px] pointer-events-none z-0"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] 
+bg-gradient-to-b from-white/10 via-gray-400/5 to-transparent 
+blur-[150px] pointer-events-none z-0"></div>
+
+<div class="absolute bottom-0 right-10 w-[500px] h-[500px] 
+bg-gradient-to-br from-gray-300/10 to-white/5 
+blur-[180px] pointer-events-none z-0"></div>
 
   <header class="sticky top-0 z-40 border-b border-white/5 bg-black/60 backdrop-blur-2xl">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
@@ -76,12 +81,12 @@ body::before{
       <nav class="flex items-center gap-3">
 
   <button id="storeTab"
-class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-sm font-bold text-white">
+class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-white/20 transition-all duration-300 text-sm font-bold text-black">
 🛒 المتجر
 </button>
 
 <button id="packagesTab"
-class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-sm font-bold text-white">
+class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-white/20 transition-all duration-300 text-sm font-bold text-black">
 📦 الحزم
 </button>
 
@@ -91,21 +96,21 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
         <div class="p-[1px] rounded-2xl bg-gradient-to-br from-blue-500/30 to-slate-700/30 shadow-2xl">
           <div class="bg-slate-900 p-2 rounded-2xl border border-white/5">
             <img src="img/logo.png" alt="FA" class="w-11 h-11 object-contain" onError="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="hidden w-11 h-11 items-center justify-center font-black text-purple-400 bg-slate-950 rounded-xl text-lg tracking-wider">FA</div>
+            <div class="hidden w-11 h-11 items-center justify-center font-black text-gray-200 bg-slate-950 rounded-xl text-lg tracking-wider">FA</div>
           </div>
         </div>
         <div>
-          <h1 class="text-xl sm:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-400">Respect One CFW <span class="text-purple-400">STORE</span></h1>
+          <h1 class="text-xl sm:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-400">LAST ONE CFW <span class="text-gray-200">STORE</span></h1>
           <div class="flex items-center gap-1.5 mt-0.5">
            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]"></span>
-<p class="text-xs font-medium text-slate-400">المتجر الرسمي لخدمات الفايتات الاحترافية</p>
+<p class="text-xs font-medium text-slate-400">المتجر الرسمي لخدمات الرول بلاي الاحترافي</p>
           </div>
         </div>
       </div>
       
-      <button id="cartBtn" class="relative group px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-500/50 transition-all duration-300 flex items-center gap-3 font-bold shadow-lg active:scale-95">
-        <span class="text-slate-300 group-hover:text-purple-400 text-sm transition-colors">🛒 السلة</span>
-        <span class="bg-purple-600 text-white text-xs px-2.5 py-0.5 rounded-md font-black min-w-[22px] text-center shadow-md shadow-purple-500/20" id="cartCount">0</span>
+      <button id="cartBtn" class="relative group px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center gap-3 font-bold shadow-lg active:scale-95">
+        <span class="text-slate-300 group-hover:text-gray-200 text-sm transition-colors">🛒 السلة</span>
+        <span class="bg-white text-black text-xs px-2.5 py-0.5 rounded-md font-black min-w-[22px] text-center shadow-md shadow-white/10/20" id="cartCount">0</span>
       </button>
 
     </div>
@@ -117,11 +122,11 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
       <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto flex-1">
         <div class="relative flex-1 sm:max-w-sm">
           <span class="absolute inset-y-0 right-4 flex items-center text-slate-500 pointer-events-none text-sm">🔍</span>
-          <input id="search" type="text" placeholder="ابحث عن خدمة مُميزة..." class="w-full pr-10 pl-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-purple-500/50 focus:outline-none transition placeholder:text-slate-600 text-sm font-medium text-white" />
+          <input id="search" type="text" placeholder="ابحث عن خدمة مُميزة..." class="w-full pr-10 pl-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-white/20/50 focus:outline-none transition placeholder:text-slate-600 text-sm font-medium text-black" />
         </div>
         
         <div class="relative">
-          <select id="category" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-purple-500/50 focus:outline-none transition text-sm text-slate-400 font-medium cursor-pointer min-w-[200px] appearance-none">
+          <select id="category" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-white/20/50 focus:outline-none transition text-sm text-slate-400 font-medium cursor-pointer min-w-[200px] appearance-none">
             <option value="all">كل الأقسام</option>
             <option value="accounts">Respect One A</option>
             <option value="fruits">Respect One B</option>
@@ -137,7 +142,7 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
       
       <div class="flex gap-3 w-full lg:w-auto justify-end">
         <div class="relative">
-          <select id="sort" class="px-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-purple-500/50 focus:outline-none transition text-sm text-slate-400 font-medium cursor-pointer appearance-none min-w-[160px]">
+          <select id="sort" class="px-5 py-3 rounded-xl bg-slate-950 border border-white/5 focus:border-white/20/50 focus:outline-none transition text-sm text-slate-400 font-medium cursor-pointer appearance-none min-w-[160px]">
             <option value="popular">الأكثر شعبية 🔥</option>
             <option value="price-asc">السعر: الأدنى أولاً</option>
             <option value="price-desc">السعر: الأعلى أولاً</option>
@@ -145,7 +150,7 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
           <span class="absolute inset-y-0 left-4 flex items-center text-slate-500 pointer-events-none text-[10px]">▼</span>
         </div>
         
-        <button id="resetFilters" class="px-5 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-400 hover:text-white border border-white/5 text-sm font-semibold transition-all">إعادة تعيين</button>
+        <button id="resetFilters" class="px-5 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-400 hover:text-black border border-white/5 text-sm font-semibold transition-all">إعادة تعيين</button>
       </div>
 
     </div>
@@ -161,11 +166,11 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
 
     <!-- Header -->
     <div class="p-6 border-b border-white/5 flex items-center justify-between">
-      <h3 class="text-lg font-black flex items-center gap-2 text-white">
-        <span class="text-purple-400">🛒</span> سلة التسوق الخاصة بك
+      <h3 class="text-lg font-black flex items-center gap-2 text-black">
+        <span class="text-gray-200">🛒</span> سلة التسوق الخاصة بك
       </h3>
 
-      <button id="closeCart" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-bold text-slate-400 hover:text-white transition">
+      <button id="closeCart" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-bold text-slate-400 hover:text-black transition">
         إغلاق ×
       </button>
     </div>
@@ -184,7 +189,7 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
   placeholder="Discord ID (أرقام فقط)"
   inputmode="numeric"
   maxlength="20"
-  class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-white/10 text-white focus:border-purple-500 outline-none"
+  class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-white/10 text-black focus:border-white/20 outline-none"
   oninput="this.value=this.value.replace(/[^0-9]/g,'')"
 />
       </div>
@@ -192,7 +197,7 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
       <!-- Total -->
       <div class="flex items-center justify-between">
         <span class="text-sm font-medium text-slate-400">إجمالي الحساب:</span>
-        <span id="cartTotal" class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
+        <span id="cartTotal" class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
           0.00 $
         </span>
       </div>
@@ -200,7 +205,13 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
       <!-- Checkout -->
      <button
   id="checkoutBtn"
-  class="block text-center w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transition-all duration-300 font-black text-white shadow-lg shadow-purple-500/20 active:scale-[0.98]"
+  class="block text-center w-full py-4 rounded-xl 
+bg-gradient-to-r from-white to-gray-400 
+hover:from-gray-100 hover:to-white 
+transition-all duration-300 
+font-black text-black 
+shadow-lg shadow-white/20 
+active:scale-[0.98]"
 >
   🚀 تأكيد الطلب
 </button>
@@ -211,23 +222,77 @@ class="px-5 py-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-p
     <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-md"></div>
     <div class="relative w-full max-w-xl bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden">
       
-      <div class="flex items-start justify-between gap-6">
-        <div class="flex-1 space-y-3">
-          <span id="mTag" class="inline-block px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-xs font-black text-purple-400"></span>
-          <h3 id="mTitle" class="text-2xl font-black text-white leading-tight"></h3>
-          <p id="mDesc" class="text-slate-400 text-sm leading-relaxed pt-2"></p>
-          <div class="pt-4">
-            <span class="text-xs text-slate-500 block mb-0.5">القيمة</span>
-            <span id="mPrice" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300"></span>
-          </div>
-        </div>
-        <button id="mClose" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white transition text-sm">✕</button>
-      </div>
-      
-      <div class="mt-8 flex flex-col sm:flex-row items-center gap-3">
-        <button id="mAdd" class="w-full sm:flex-1 px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 font-bold transition text-sm">إضافة للسلة</button>
-        <button id="mInstantBuy" class="w-full sm:flex-1 px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-black transition text-sm shadow-xl shadow-purple-500/20 active:scale-95">شراء فوري</button>
-      </div>
+<div class="flex items-start justify-between gap-6">
+  <div class="flex-1 space-y-3">
+
+    <span id="mTag" 
+    class="inline-block px-3 py-1 rounded-lg 
+    bg-white/10 
+    border border-white/20 
+    text-xs font-black text-gray-200">
+    </span>
+
+    <h3 id="mTitle" 
+    class="text-2xl font-black text-white leading-tight">
+    </h3>
+
+    <p id="mDesc" 
+    class="text-gray-400 text-sm leading-relaxed pt-2">
+    </p>
+
+    <div class="pt-4">
+      <span class="text-xs text-gray-500 block mb-0.5">
+        القيمة
+      </span>
+
+      <span id="mPrice" 
+      class="text-3xl font-black text-transparent bg-clip-text 
+      bg-gradient-to-r from-white to-gray-400">
+      </span>
+    </div>
+
+  </div>
+
+  <button id="mClose" 
+  class="w-8 h-8 rounded-lg 
+  bg-white/5 
+  hover:bg-white/20 
+  flex items-center justify-center 
+  text-gray-400 hover:text-white 
+  transition text-sm">
+  ✕
+  </button>
+
+</div>
+
+
+<div class="mt-8 flex flex-col sm:flex-row items-center gap-3">
+
+  <button id="mAdd" 
+  class="w-full sm:flex-1 px-6 py-3.5 rounded-xl 
+  bg-white/10 
+  hover:bg-white/20 
+  border border-white/10 
+  text-white 
+  font-bold 
+  transition text-sm">
+  إضافة للسلة
+  </button>
+
+
+  <button id="mInstantBuy" 
+  class="w-full sm:flex-1 px-6 py-3.5 rounded-xl 
+  bg-gradient-to-r from-white to-gray-400 
+  hover:from-gray-100 hover:to-white
+  text-black 
+  font-black 
+  transition text-sm 
+  shadow-xl shadow-white/20 
+  active:scale-95">
+  شراء فوري
+  </button>
+
+</div>
 
     </div>
   </div>
@@ -452,19 +517,21 @@ let products = [...storeProducts];
           <div>
             <div class="aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-slate-950 relative border border-white/5">
               <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none"/>
-              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg text-[10px] font-black bg-slate-950/80 backdrop-blur text-purple-400 border border-purple-500/30 tracking-wide">${p.tag}</div>
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg text-[10px] font-black bg-slate-950/80 backdrop-blur text-gray-200 border border-white/20 tracking-wide">${p.tag}</div>
             </div>
-            <h3 class="font-bold text-base text-white/95 leading-tight line-clamp-1 group-hover:text-purple-400 transition-colors duration-300">${p.title}</h3>
+            <h3 class="font-bold text-base text-black/95 leading-tight line-clamp-1 group-hover:text-gray-200 transition-colors duration-300">${p.title}</h3>
             <p class="text-slate-400 text-xs mt-2 leading-relaxed line-clamp-2">${p.desc}</p>
           </div>
           <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
             <div class="flex flex-col">
               <span class="text-[9px] text-slate-500 font-bold uppercase tracking-wider">السعر التقديري</span>
-              <span class="text-lg font-black text-white">${p.price} <span class="text-xs font-normal text-slate-400">$</span></span>
+              <span class="text-lg font-black text-black">${p.price} <span class="text-xs font-normal text-slate-400">$</span></span>
             </div>
             <div class="flex gap-1.5">
               <button data-id="${p.id}" class="btn-view px-3 py-2 rounded-lg text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/5 transition-all">تفاصيل</button>
-              <button data-id="${p.id}" class="btn-add px-4 py-2 rounded-lg text-xs font-black bg-purple-600 hover:bg-purple-500 text-white transition-all active:scale-95 shadow-lg shadow-blue-600/10">إضافة</button>
+              <button data-id="${p.id}" class="btn-add px-4 py-2 rounded-lg text-xs font-black bg-gray-400 hover:bg-gray-500 text-black transition-all active:scale-95 shadow-lg shadow-gray-500/20">
+إضافة
+</button>
             </div>
           </div>
         </div>
@@ -510,13 +577,13 @@ let products = [...storeProducts];
       cartItems.innerHTML=cart.length ? cart.map(item=>
         `<div class="p-4 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-between gap-4">
           <div>
-            <div class="font-bold text-sm text-white/90">${item.title}</div>
-            <div class="text-xs text-purple-400 mt-1 font-bold">${item.price} $ × ${item.qty}</div>
+            <div class="font-bold text-sm text-black/90">${item.title}</div>
+            <div class="text-xs text-gray-200 mt-1 font-bold">${item.price} $ × ${item.qty}</div>
           </div>
           <div class="flex items-center gap-1">
             <button class="w-6 h-6 flex items-center justify-center rounded bg-white/5 hover:bg-white/10 text-xs font-bold" onclick="changeQty(${item.id},-1)">-</button>
             <button class="w-6 h-6 flex items-center justify-center rounded bg-white/5 hover:bg-white/10 text-xs font-bold" onclick="changeQty(${item.id},1)">+</button>
-            <button class="px-2.5 py-1 rounded bg-rose-500/10 hover:bg-rose-500 text-[11px] font-bold text-rose-400 hover:text-white transition ml-1" onclick="removeFromCart(${item.id})">حذف</button>
+            <button class="px-2.5 py-1 rounded bg-rose-500/10 hover:bg-rose-500 text-[11px] font-bold text-rose-400 hover:text-black transition ml-1" onclick="removeFromCart(${item.id})">حذف</button>
           </div>
         </div>`).join('') : `<div class="text-center py-12 text-slate-600 text-xs font-bold tracking-wide">لم تقم بإضافة أي خدمة بعد.</div>`;
     }
@@ -614,7 +681,7 @@ function showToastError(msg) {
       </div>
 
       <div class="text-center">
-        <div class="font-black text-white text-sm">${msg}</div>
+        <div class="font-black text-black text-sm">${msg}</div>
       </div>
     </div>
   `;
@@ -634,14 +701,14 @@ function showToast() {
   const toast = document.getElementById("toast");
 
   toast.innerHTML = `
-    <div class="px-6 py-4 rounded-2xl bg-slate-900/90 border border-purple-500/40 shadow-2xl shadow-purple-500/30 backdrop-blur-xl flex items-center gap-3">
+    <div class="px-6 py-4 rounded-2xl bg-slate-900/90 border border-white/20/40 shadow-2xl shadow-white/10/30 backdrop-blur-xl flex items-center gap-3">
 
-      <div class="w-11 h-11 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl shadow-lg shadow-purple-500/20">
+      <div class="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-gray-200 text-2xl shadow-lg shadow-white/10/20">
         ✔
       </div>
 
       <div class="text-center">
-        <div class="font-black text-white text-sm">
+        <div class="font-black text-black text-sm">
           تم إرسال الطلب بنجاح
         </div>
         <div class="text-xs text-slate-400">
@@ -665,23 +732,23 @@ function showToast() {
   </script>
 
   <footer class="border-t border-white/5 bg-slate-950 p-8 mt-32 text-center relative z-10">
-    <p class="mb-4 font-black text-sm tracking-widest text-slate-600 uppercase">Respect One CFW <span class="text-purple-400">[STORE]</span></p>
+    <p class="mb-4 font-black text-sm tracking-widest text-slate-600 uppercase">LSAT ONE CFW <span class="text-gray-200">[STORE]</span></p>
     <div class="flex justify-center">
-      <a href="https://discord.gg/DtbzJxpZ4s" target="_blank" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-purple-600/10 text-slate-400 hover:text-purple-400 border border-white/5 hover:border-purple-500/20 font-bold text-xs tracking-wider transition-all duration-300">
+      <a href="https://discord.gg/lo-rp" target="_blank" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-white/10 text-slate-400 hover:text-gray-200 border border-white/5 hover:border-white/20 font-bold text-xs tracking-wider transition-all duration-300">
         💬 مركز الدعم الفني والشكاوى عبر الديسكورد
       </a>
     </div>
   </footer>
 
 <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 hidden z-50">
-  <div class="px-6 py-4 rounded-2xl bg-slate-900/90 border border-purple-500/40 shadow-2xl shadow-purple-500/30 backdrop-blur-xl flex items-center gap-3 animate-bounce">
+  <div class="px-6 py-4 rounded-2xl bg-slate-900/90 border border-white/20/40 shadow-2xl shadow-white/10/30 backdrop-blur-xl flex items-center gap-3 animate-bounce">
     
-    <div class="w-11 h-11 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl shadow-lg shadow-purple-500/20">
+    <div class="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-gray-200 text-2xl shadow-lg shadow-white/10/20">
       ✔
     </div>
 
     <div class="text-center">
-      <div class="font-black text-white text-sm">تم إرسال الطلب بنجاح</div>
+      <div class="font-black text-black text-sm">تم إرسال الطلب بنجاح</div>
       <div class="text-xs text-slate-400">تم استلام طلبك وسيتم معالجته قريباً 🚀</div>
     </div>
 
